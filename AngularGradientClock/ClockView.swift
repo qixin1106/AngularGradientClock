@@ -16,9 +16,7 @@ struct ClockView: View {
     
     var body: some View {
         ZStack() {
-            AngularGradient(gradient: Gradient(colors: [Color.black, Color.white]), center:.center)
-                .frame(width: _screenHeight*2, height: _screenHeight*2)
-                .rotationEffect(.degrees(rotationAngle))
+            AngularGradient(gradient: Gradient(colors: [Color.black, Color.white]), center:.center, angle: .degrees(rotationAngle))
                 .ignoresSafeArea()
             
             VStack() {
@@ -34,7 +32,6 @@ struct ClockView: View {
                     .foregroundColor(.white)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0 ))
             }
-            .frame(width: _screenWidth, height: _screenHeight)
         }
         .onAppear {
             withAnimation(.linear(duration: _rotationDuration).repeatForever(autoreverses: false)) {
