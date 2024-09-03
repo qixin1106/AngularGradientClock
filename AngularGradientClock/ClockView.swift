@@ -10,8 +10,6 @@ import SwiftUI
 struct ClockView: View {
     
     @State private var rotationAngle: Double = 0
-    private let _screenWidth = UIScreen.main.bounds.size.width
-    private let _screenHeight = UIScreen.main.bounds.size.height
     private let _rotationDuration = 3.0
     
     var body: some View {
